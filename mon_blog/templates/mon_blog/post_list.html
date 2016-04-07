@@ -8,7 +8,14 @@
 		</div>
 
 		<div>
-			<p>published: 07.04.2016, 16:36</p>
+			{%for post in posts %}
+				<div>
+					<p>publié: {{ post.published_date}}</p>
+					<h1><a href ="">{{ post.title}}</a></h1>
+					<p>{{ post.text|linebreaks }}</p>
+				</div>
+			{% endfor %}
+			<!--<p>published: 07.04.2016, 16:36</p>
 			<h2><a href="">first post</a></h2>
 			<p> first post try
 		</div>
@@ -16,7 +23,7 @@
 		<div>
 			<p>published: 07.04.2016, 16:37</p>
 			<h2><a href="">second post</a></h2>
-			<p> second post try
+			<p> second post try-->
 		</div>
 	</body>
 </html>
